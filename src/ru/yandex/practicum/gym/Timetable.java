@@ -30,7 +30,7 @@ public class Timetable {
         return timetable.get(dayOfWeek);
     }
 
-    public ArrayList<TrainingSession> getTrainingSessionsForDayAndTime(DayOfWeek dayOfWeek, TimeOfDay timeOfDay) {
+    public List<TrainingSession> getTrainingSessionsForDayAndTime(DayOfWeek dayOfWeek, TimeOfDay timeOfDay) {
         TreeMap<TimeOfDay, ArrayList<TrainingSession>> dayTable = timetable.get(dayOfWeek);
         return dayTable == null ? null : dayTable.get(timeOfDay);
     }
